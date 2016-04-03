@@ -2,14 +2,33 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Pure CSS parallax website</title>
+    <title>University of Ottawa Python Club</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     
     
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
-        <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    <style type="text/css">
+  .loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+</style>
 
+        <link rel="stylesheet" href="css/style.css">
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript">
+$(window).load(function() {
+  $(".loader").fadeOut("slow");
+})
+</script>
     
     
     
@@ -26,16 +45,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Arctic Monkeys</a>
+      <a class="navbar-brand" href="#">UOPy Club</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home">Home</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#discography">Discography</a></li>
-        <li><a href="#gigs">Gigs</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#members">About us</a></li>
+        <li><a href="#discography">Upcoming Events</a></li>
+        <li><a href="#gigs">News</a></li>
+        <li><a href="#about">join us</a></li>
       </ul>
     </div>
   </div>
@@ -44,41 +63,51 @@
 
 <div id="home">
   <div class="center-image">
+    <!--
     <img src="https://dl.dropboxusercontent.com/u/50943129/codepen/Arctic-Monkeys-logo.png" height="150px"><br>
     <a href="#members" class="btn btn-default btn-md">Continue</a>
+  -->
+  <h1 style='color:white;font-size:6rem;'><div class="element"></div></h1>
+        <img class="uottawa_logo animate fadeInLeft" src="img/uottawa_hor_white.png" width="40%" style="display:none; padding-top:30px;">
   </div>
 </div>
 
 <div id="members" class="pad-md">
   <div class="container">
     <div class="row">
-      <h2>Members</h2>
+      <h2>Representant</h2>
     </div>
     <div class="row">
-      <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/alex-turner.jpg" alt="Generic placeholder image" width="140" height="140">
-        <h3>Alex Turner</h3>
-        <p>Alexander David "Alex" Turner (born 6 January 1986) is an English musician, singer, and songwriter. He is the lead vocalist, guitarist, and principal songwriter of the English rock band Arctic Monkeys.</p>
-        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+      <div class="col-lg-12 text-center">
+        <img class="uottawa_logo animate fadeInLeft featurette-image img-responsive center-block" src="img/logo2.jpg" width="60%" style="padding-top:30px;margin-bottom:8px;" data-holder-rendered="true" data-src="holder.js/500x500/auto">
+        <hr style="color:black;">
       </div>
       <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/matt-helders.jpg" alt="Generic placeholder image" width="140" height="140">
-        <h3>Matt Helders</h3>
-        <p>Matthew Helders (born 7 May, 1986) is an English drummer, vocalist and songwriter. He is best known as a founding member of the indie rock band Arctic Monkeys, with whom he has recorded five studio albums...</p>
-        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+        <img class="img-circle img-responsive center-block" src="img/gmg.jpeg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Guinsly Michel</h3>
+        <p>President of the Uopy Club. Master candidate in Information studies @ UO</p>
+        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
       </div>
       <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/jamie-cook.jpg" alt="Generic placeholder image" width="140" height="140">
-        <h3>Jamie Cook</h3>
-        <p>Jamie Robert Cook (born 8 July 1985) is an English guitarist and songwriter. He is best known as a founding member of the indie rock band Arctic Monkeys, with whom he has recorded five studio albums.</p>
-        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+        <img class="img-circle img-responsive center-block" src="img/nabin.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Nabin Subedi</h3>
+        <p>V-P social of the UOPy club. Master candidate in Electronic Business @ UO</p>
+        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
       </div>
+      <div class="col-lg-3">
+        <img class="img-circle img-responsive center-block" src="img/tae.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Taiwo Adeife</h3>
+        <p>V-P of the UOPy club. Master candidate in Electronic Business @ UO</p>
+        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
+      </div>
+      <!--
       <div class="col-lg-3">
         <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/nick-omalley.jpg" alt="Generic placeholder image" width="140" height="140">
         <h3>Nick O'Malley</h3>
         <p>Nicholas "Nick" O'Malley (born 5 July 1985) is the bass guitarist and backing vocalist of Sheffield-based band Arctic Monkeys.</p>
         <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
       </div>
+    -->
     </div>
   </div>
 </div>
@@ -86,17 +115,18 @@
 <div id="discography" class="pad-md">
   <div class="container">
     <div class="row">
-      <h2>Discography</h2>
+      <h2>About us</h2>
     </div>
     <div class="row featurette">
       <div class="col-md-9">
-        <h3 class="featurette-heading">Whatever People Say I Am, That's What I'm Not<span class="text-muted"> 2006</span></h3>
-        <p class="lead">Whatever People Say I Am, That's What I'm Not is the debut studio album by the English rock band Arctic Monkeys, released on 23 January 2006. The album surpassed Elastica's self-titled album to become the fastest selling debut album in British music history, shifting over 360,000 copies in its first week, and remains the fastest selling debut album by a band. It has since gone quintuple platinum in the UK.</p>
+        <h3 class="featurette-heading">Where the pythonist's at<span class="text-muted"> UOttawa</span></h3>
+        <p class="lead">We're a growing volunteer run community of Python users based @ the University of Ottawa! We bring together Pythonistas from academic, web, science, data, visual effects and other backgrounds under one roof to discuss all things related to Python.<span class="text-muted"> Our Goal</span> is to teach a basic level of python to any students @ Uottawa. Feel free to come and learn Python </p>
       </div>
       <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/whatever-the-people-say-thats-what-i-am-not.jpg" data-holder-rendered="true">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://www.unixstickers.com/image/cache/data/stickers/python/python_sh-600x600.png" data-holder-rendered="true">
       </div>
     </div>
+    <!--
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-9 col-md-push-3">
@@ -107,44 +137,59 @@
         <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/favorite-worst-nightmare.jpg" data-holder-rendered="true">
       </div>
     </div>
+  -->
   </div>
 </div>
 
 <div id="discography-layover" class="pad-md">
+  <h1 style="color:white;font-size:6rem;" class="text-center">Workshops</h1>
 </div>
 
 <div id="discography-part2" class="pad-md">
   <div class="container">
     <div class="row featurette">
       <div class="col-md-9">
-        <h3 class="featurette-heading">Humbug <span class="text-muted">2009</span></h3>
-        <p class="lead">Humbug is the third studio album by the English indie rock band Arctic Monkeys, first released on 19 August 2009 by Domino Records. The band started to write songs for the album towards the end of summer 2008, and finished it entirely on spring 2009.<br>Like their last release, Favourite Worst Nightmare (2007), Humbug was released first in Japan, on 19 August 2009, followed by Australia, Brazil, Ireland and Germany, on 21 August 2009.</p>
+        <h3 class="featurette-heading">Send "SMS" with Python <span class="text-muted">April 28th 2016</span></h3>
+        <p class="lead">This presentation will show you how to build an "SMS center" with Python , Kannel and a GSM modem. This is an advance topic but if you have a intermediate knowledge of programming you are welcome to assist. If you want to assist please send us an email.</p>
+        <div class="bs-component" style="margin-bottom: 40px;">
+              <span class="label label-primary">intermediate</span>
+              <span class="label label-success">django</span>
+              <span class="label label-warning">web development</span>
+              <span class="label label-danger">linux</span>
+              <span class="label label-info">Mac</span>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+        </div>
       </div>
       <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/humbug.jpg" data-holder-rendered="true">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://raspberry.io/media/images/project_gallery_images/raspberrypoll18.jpg" data-holder-rendered="true">
       </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-9 col-md-push-3">
-        <h2 class="featurette-heading">Suck It and See <span class="text-muted">2011</span></h2>
-        <p class="lead">Suck It and See is the fourth studio album by the English indie rock band Arctic Monkeys, released in June 2011 on Domino. The album was produced by the band's longtime collaborator, James Ford at Sound City Studios, Los Angeles, with both he and, drummer, Matt Helders promising to deliver a more "instant", "poppy" and "vintage" sound in comparison to the band's darker, polarising previous album, Humbug.</p>
+        <h3 class="featurette-heading">Create a python package <span class="text-muted">April 26th 2016</span></h3>
+        <p class="lead">You will learn to create a Python module and deploy it to Pypi as a package.</p>
+          <div class="bs-component" style="margin-bottom: 40px;">
+              <span class="label label-primary">beginner</span>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+          </div>
       </div>
       <div class="col-md-3 col-md-pull-9">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/suck-it-and-see.jpg" data-holder-rendered="true">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://myzone.programiz.netdna-cdn.com/sites/tutorial2program/files/PackageModuleStructure.jpg" data-holder-rendered="true">
       </div>
     </div>
-
+    <!--
     <hr class="featurette-divider">
     <div class="row featurette">
       <div class="col-md-9">
-        <h2 class="featurette-heading">AM <span class="text-muted">2013</span></h2>
+        <h2 class="featurette-heading">Workshop <span class="text-muted">2016</span></h2>
         <p class="lead">AM is the fifth studio album by the English indie rock band Arctic Monkeys. It was produced by James Ford and co-produced by Ross Orton at Sage & Sound Recording in Los Angeles and Rancho De La Luna in Joshua Tree, California, and released in September 2013 through Domino. The album was promoted by the singles "R U Mine?", "Do I Wanna Know?", "Why'd You Only Call Me When You're High?", "One for the Road", "Arabella", and "Snap Out of It". It features guest appearances by Josh Homme, Bill Ryder-Jones, and Pete Thomas.</p>
       </div>
       <div class="col-md-3">
         <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/am.jpg" data-holder-rendered="true">
       </div>
     </div>
+  -->
   </div>
 </div>
 
@@ -153,22 +198,22 @@
 <div id="gigs" class="pad-md">
   <div class="container">
     <div class="row">
-      <h2>Gigs</h2>
+      <h2>News</h2>
     </div>
     <div class="row">
       <div class="col-sm-4">
         <div class="panel panel-default">
-          <div class="panel-heading">15.11.14 HSBC Arena - Rio de Janeiro, Brazil</div>
+          <div class="panel-heading">No news</div>
           <div class="panel-body">
-            Sold out.
+            For April
           </div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="panel panel-default">
-          <div class="panel-heading">11.11.14 Arena Movistar - Santiago, Chili</div>
+          <div class="panel-heading">Pas de récentes nouvelles</div>
           <div class="panel-body">
-            Sold out.
+            pour le mois d'avril
           </div>
         </div>
       </div>
@@ -181,9 +226,9 @@
 <div id="about">
   <div class="container">
     <div class="row">
-      <h1>About</h1>
+      <h1>About/ À Propos</h1>
       <div class="col-sm-12 text-center">
-        <h3>Pure css parallax scrolling, ah yeah!</h3>
+        <h3>Send us an email @ uottawapython at gmail dot com</h3>
       </div>
     </div>
   </div>
@@ -192,14 +237,36 @@
 <footer>
   <div class="container">
     <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>© 2016 That Default Company, Inc.</p>
+    <p>© 2016 University of Ottawa Python Club</p>
   </div>
 </footer>
+
     <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 
         <script src="js/index.js"></script>
+        <script>
+// Changing the defaults
+window.sr = ScrollReveal({ reset: true });
 
+// Customizing a reveal set
+sr.reveal('.featurette-image', { duration: 2000 });
+        </script>
+
+<script>
+
+      $(".element").typed({
+        strings: ["^1500University of ^400 Ottawa ^500 Python ^300 Club!^700", "Where ^400 Python Enthusiasts ^300 meets!"],
+        //typeSpeed: 100,
+        backSpeed: 60,
+        cursorChar: "",
+        callback: function() {
+          $("img.uottawa_logo").delay(900).fadeIn();;
+        },
+      });
+
+</script>
     
     
     

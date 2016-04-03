@@ -1,240 +1,207 @@
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Hello world</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		
-		
-		<style type="text/css">
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Pure CSS parallax website</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
-			div.navbar, div.navbar-default, div.navbar-static-top{
-				margin-bottom: 0;
-			}
-			div.jumbotron{
-				background-color: #333333;
-				margin-bottom: 0;
-				background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20xmlns%3Axlink%3D%27http%3A//www.w3.org/1999/xlink%27%20x%3D%270px%27%20y%3D%270px%27%0A%20%20%20%20%20width%3D%2736px%27%20height%3D%2736px%27%20viewBox%3D%27-7%20-7%2036%2036%27%20enable-background%3D%27new%20-7%20-7%2036%2036%27%20xml%3Aspace%3D%27preserve%27%3E%0A%3Cpath%20fill%3D%27white%27%20d%3D%27M5%2C0H0v5h-2V0h-5v-2h5v-5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
-				background-image: url("http://www.moscowpython.ru/static/images/section-main-bg.2388d8b71e72.png");
-		    background-repeat: no-repeat;
-		    background-position: center -80px;
-		    min-height: 600px;
-		    color: #fff;
-			}
-			section.about, section.events{
-				background-color: #D3CCC3;
-				min-height: 600px;
-				padding: 60px 0;
-			}
-			section.members{
-				background-color: #fffff;
-				min-height: 600px;
-				padding: 60px 0;
-			}
-			h2.heading {
-		   // background-image: url("http://www.moscowpython.ru/static/images/star.1a54cad42100.png");
-		    background-repeat: no-repeat;
-		    background-position: 2px 16px;
-		   // padding-left: 138px;
-		    width: 530px;
-		    min-height: 90px;
-		    line-height: 120px;
-		    vertical-align: middle;
-		    font-weight: bolder;
-		    color:#5A5C5B;
-		    text-transform: uppercase;
-			}
-			p {
-    margin: 0 0 30px;
-    line-height: 1.68em;
-    font-weight: 100;
-    font-size: 18px;
-    color: #2b3252;
-    color: #5a5c5b;
-    font-family: PT Sans;
-}	
-.jumbotron h1{
-	padding-top: 40px;
-}
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-		</style>
-<style type="text/css">
-	.loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif') 50% 50% no-repeat rgb(249,249,249);
-}
-</style>
+        <link rel="stylesheet" href="css/style.css">
 
-<!-- Js call loader-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-	$(".loader").fadeOut("slow");
-})
-</script>
-</head>
+    
+    
+    
+  </head>
 
-<body>
-<!-- Loader-->
-<div class="loader"></div>
-<!-- Navbar-->
-<div role="navigation" class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">UOPy Club</a></div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/"><i class="fa fa-flag"></i>&nbsp;Homepage</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Events</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right visible-md visible-lg">
-                <li><a href="#">Fr/En</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Arctic Monkeys</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#discography">Discography</a></li>
+        <li><a href="#gigs">Gigs</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="home">
+  <div class="center-image">
+    <img src="https://dl.dropboxusercontent.com/u/50943129/codepen/Arctic-Monkeys-logo.png" height="150px"><br>
+    <a href="#members" class="btn btn-default btn-md">Continue</a>
+  </div>
+</div>
+
+<div id="members" class="pad-md">
+  <div class="container">
+    <div class="row">
+      <h2>Members</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/alex-turner.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Alex Turner</h3>
+        <p>Alexander David "Alex" Turner (born 6 January 1986) is an English musician, singer, and songwriter. He is the lead vocalist, guitarist, and principal songwriter of the English rock band Arctic Monkeys.</p>
+        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+      </div>
+      <div class="col-lg-3">
+        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/matt-helders.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Matt Helders</h3>
+        <p>Matthew Helders (born 7 May, 1986) is an English drummer, vocalist and songwriter. He is best known as a founding member of the indie rock band Arctic Monkeys, with whom he has recorded five studio albums...</p>
+        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+      </div>
+      <div class="col-lg-3">
+        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/jamie-cook.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Jamie Cook</h3>
+        <p>Jamie Robert Cook (born 8 July 1985) is an English guitarist and songwriter. He is best known as a founding member of the indie rock band Arctic Monkeys, with whom he has recorded five studio albums.</p>
+        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+      </div>
+      <div class="col-lg-3">
+        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/nick-omalley.jpg" alt="Generic placeholder image" width="140" height="140">
+        <h3>Nick O'Malley</h3>
+        <p>Nicholas "Nick" O'Malley (born 5 July 1985) is the bass guitarist and backing vocalist of Sheffield-based band Arctic Monkeys.</p>
+        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="discography" class="pad-md">
+  <div class="container">
+    <div class="row">
+      <h2>Discography</h2>
+    </div>
+    <div class="row featurette">
+      <div class="col-md-9">
+        <h3 class="featurette-heading">Whatever People Say I Am, That's What I'm Not<span class="text-muted"> 2006</span></h3>
+        <p class="lead">Whatever People Say I Am, That's What I'm Not is the debut studio album by the English rock band Arctic Monkeys, released on 23 January 2006. The album surpassed Elastica's self-titled album to become the fastest selling debut album in British music history, shifting over 360,000 copies in its first week, and remains the fastest selling debut album by a band. It has since gone quintuple platinum in the UK.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/whatever-the-people-say-thats-what-i-am-not.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-9 col-md-push-3">
+        <h2 class="featurette-heading">Favourite Worst Nightmare <span class="text-muted">2007</span></h2>
+        <p class="lead">Favourite Worst Nightmare is the second studio album by the English indie rock band Arctic Monkeys that was first released in Japan on 18 April 2007 before being released around the world. Recorded in east London's Miloco Studios with producers James Ford and Mike Crossey, the album was preceded by the release of "Brianstorm" on 16 April 2007.</p>
+      </div>
+      <div class="col-md-3 col-md-pull-9">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/favorite-worst-nightmare.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="discography-layover" class="pad-md">
+</div>
+
+<div id="discography-part2" class="pad-md">
+  <div class="container">
+    <div class="row featurette">
+      <div class="col-md-9">
+        <h3 class="featurette-heading">Humbug <span class="text-muted">2009</span></h3>
+        <p class="lead">Humbug is the third studio album by the English indie rock band Arctic Monkeys, first released on 19 August 2009 by Domino Records. The band started to write songs for the album towards the end of summer 2008, and finished it entirely on spring 2009.<br>Like their last release, Favourite Worst Nightmare (2007), Humbug was released first in Japan, on 19 August 2009, followed by Australia, Brazil, Ireland and Germany, on 21 August 2009.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/humbug.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-9 col-md-push-3">
+        <h2 class="featurette-heading">Suck It and See <span class="text-muted">2011</span></h2>
+        <p class="lead">Suck It and See is the fourth studio album by the English indie rock band Arctic Monkeys, released in June 2011 on Domino. The album was produced by the band's longtime collaborator, James Ford at Sound City Studios, Los Angeles, with both he and, drummer, Matt Helders promising to deliver a more "instant", "poppy" and "vintage" sound in comparison to the band's darker, polarising previous album, Humbug.</p>
+      </div>
+      <div class="col-md-3 col-md-pull-9">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/suck-it-and-see.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-9">
+        <h2 class="featurette-heading">AM <span class="text-muted">2013</span></h2>
+        <p class="lead">AM is the fifth studio album by the English indie rock band Arctic Monkeys. It was produced by James Ford and co-produced by Ross Orton at Sage & Sound Recording in Los Angeles and Rancho De La Luna in Joshua Tree, California, and released in September 2013 through Domino. The album was promoted by the singles "R U Mine?", "Do I Wanna Know?", "Why'd You Only Call Me When You're High?", "One for the Road", "Arabella", and "Snap Out of It". It features guest appearances by Josh Homme, Bill Ryder-Jones, and Pete Thomas.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/am.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- fourth section - Information -->
+<div id="gigs" class="pad-md">
+  <div class="container">
+    <div class="row">
+      <h2>Gigs</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">15.11.14 HSBC Arena - Rio de Janeiro, Brazil</div>
+          <div class="panel-body">
+            Sold out.
+          </div>
         </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">11.11.14 Arena Movistar - Santiago, Chili</div>
+          <div class="panel-body">
+            Sold out.
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-<!-- Jumbotron-->
-<div class="jumbotron">
-    <div class="container text-center">
-				<h1><div class="element"></div></h1>
-				<img class="uottawa_logo" src="http://www.uottawa.ca/brand/sites/www.uottawa.ca.brand/files/uottawa_hor_white.png" width="50%" style="display:none; padding-top:30px;">
+<!-- /fourth section -->
+
+<!-- fifth section -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <h1>About</h1>
+      <div class="col-sm-12 text-center">
+        <h3>Pure css parallax scrolling, ah yeah!</h3>
+      </div>
     </div>
+  </div>
 </div>
-<!-- About us-->
-<section class="about">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2 class="heading">À Propos</h2>
-				<p>Ce club est en processus de formalisation auprès de la SFUO. Le site internet sera complété après les formalités.</p>
-				<h2 class="heading">About us</h2>
-				<p>SFUO is currently analysing this new club registration. This website will be complete if the registration is approved.</p>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Members 
-<section class="members">
-<section class="members">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2 class="heading">Members of UOPy Club</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae similique dolores quos officiis dicta nobis ratione in et aut voluptatibus. Atque suscipit voluptatem iste molestiae eos blanditiis deleniti, mollitia ex, quidem deserunt aliquid! Reiciendis molestias maxime corporis harum illum nobis, voluptates, blanditiis. Cumque provident exercitationem libero quaerat, blanditiis modi, ea nemo iste quae delectus nam omnis adipisci praesentium maxime dicta neque obcaecati. Voluptates, quibusdam voluptas consequatur autem vero ex quia maiores, inventore sint nulla praesentium quo, ducimus repellendus, doloribus! Maxime deleniti praesentium voluptate! Quis animi labore alias vero voluptas voluptatum consequatur adipisci ex modi dolorem beatae iure, magnam praesentium, magni pariatur harum facere? Deserunt officia quis possimus delectus! Asperiores tempora modi voluptas quo quod id numquam adipisci aliquam animi, ut! Quidem aliquam nemo mollitia voluptatum dicta voluptate sapiente libero optio quas atque, enim accusantium, eaque itaque illo nostrum. Obcaecati doloribus, similique officiis deleniti? Mollitia sequi, consequuntur laborum dicta laudantium porro.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos tempora debitis, officia, placeat omnis? Natus quae, optio soluta iste aliquid suscipit eligendi tempora aut magni, excepturi minima libero animi voluptates eum repudiandae facilis. Dignissimos omnis possimus rem, blanditiis nesciunt distinctio quia deleniti laboriosam nisi quibusdam in, sunt consequatur voluptate tenetur doloribus eligendi error ipsam aliquid eaque at saepe repudiandae. Eveniet aliquam quaerat sapiente. Voluptates consequatur tenetur rem tempore, fugiat molestiae doloribus voluptatem repudiandae, necessitatibus excepturi officiis officia qui vero voluptas ducimus, laboriosam assumenda provident sit blanditiis in sed. Eveniet eum nihil, officiis nesciunt, tempore enim, sed obcaecati quasi placeat minus ullam saepe eos neque adipisci quas animi ad illum ex quibusdam. Odit minima pariatur quas sapiente, vero, maiores consequuntur eos impedit perspiciatis enim inventore officia. Reiciendis, eaque. Unde aliquid esse at itaque doloremque, sed? Tenetur velit, error, ipsam, iusto laborum quasi modi obcaecati nulla laudantium quam id, soluta officiis.</p>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
--->
-<!-- Upcoming Projects
-<section class="events">
-<section class="members">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2 class="heading">Events</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae similique dolores quos officiis dicta nobis ratione in et aut voluptatibus. Atque suscipit voluptatem iste molestiae eos blanditiis deleniti, mollitia ex, quidem deserunt aliquid! Reiciendis molestias maxime corporis harum illum nobis, voluptates, blanditiis. Cumque provident exercitationem libero quaerat, blanditiis modi, ea nemo iste quae delectus nam omnis adipisci praesentium maxime dicta neque obcaecati. Voluptates, quibusdam voluptas consequatur autem vero ex quia maiores, inventore sint nulla praesentium quo, ducimus repellendus, doloribus! Maxime deleniti praesentium voluptate! Quis animi labore alias vero voluptas voluptatum consequatur adipisci ex modi dolorem beatae iure, magnam praesentium, magni pariatur harum facere? Deserunt officia quis possimus delectus! Asperiores tempora modi voluptas quo quod id numquam adipisci aliquam animi, ut! Quidem aliquam nemo mollitia voluptatum dicta voluptate sapiente libero optio quas atque, enim accusantium, eaque itaque illo nostrum. Obcaecati doloribus, similique officiis deleniti? Mollitia sequi, consequuntur laborum dicta laudantium porro.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos tempora debitis, officia, placeat omnis? Natus quae, optio soluta iste aliquid suscipit eligendi tempora aut magni, excepturi minima libero animi voluptates eum repudiandae facilis. Dignissimos omnis possimus rem, blanditiis nesciunt distinctio quia deleniti laboriosam nisi quibusdam in, sunt consequatur voluptate tenetur doloribus eligendi error ipsam aliquid eaque at saepe repudiandae. Eveniet aliquam quaerat sapiente. Voluptates consequatur tenetur rem tempore, fugiat molestiae doloribus voluptatem repudiandae, necessitatibus excepturi officiis officia qui vero voluptas ducimus, laboriosam assumenda provident sit blanditiis in sed. Eveniet eum nihil, officiis nesciunt, tempore enim, sed obcaecati quasi placeat minus ullam saepe eos neque adipisci quas animi ad illum ex quibusdam. Odit minima pariatur quas sapiente, vero, maiores consequuntur eos impedit perspiciatis enim inventore officia. Reiciendis, eaque. Unde aliquid esse at itaque doloremque, sed? Tenetur velit, error, ipsam, iusto laborum quasi modi obcaecati nulla laudantium quam id, soluta officiis.</p>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
--->
-<!-- Contact us-->
-<style type="text/css">
-	.contact_us {
-    background: #26292B;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 40px;
-    border-top: 5px solid #666;
-    margin-top:0;
-}
-.brand-footer {
-    color: #666;
-    font-family: "Oswald",sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 #FDFDFD, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #FDFDFD;
-}
-</style>
-<section class="contact_us">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h3 class="brand-footer">Contact us / Nous Rejoindre</h3>
-				<p>uottawapython at gmail dot com</p>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Footer-->
-<!-- Copyright-->
 
-<!--
-<img src="/static/events/Selyutina_mj.jpg" alt="My image"/>
--->
+<footer>
+  <div class="container">
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>© 2016 That Default Company, Inc.</p>
+  </div>
+</footer>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-<script>
-  $(function(){
-      $(".element").typed({
-        strings: ["^1500University of ^400 Ottawa ^500 Python ^300 Club!^700", "Where ^400 Python Enthousiasts ^300 meets!"],
-        //typeSpeed: 100,
-        backSpeed: 60,
-        cursorChar: "",
-        callback: function() {
-        	$("img.uottawa_logo").delay(900).fadeIn();;
-        },
-      });
-  });
-</script>
+        <script src="js/index.js"></script>
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-61032706-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
+    
+    
+    
+  </body>
 </html>

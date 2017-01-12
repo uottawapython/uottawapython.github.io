@@ -1,320 +1,350 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>University of Ottawa Python Club</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="uopy">
+
+    <title>UO Python Club</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="static/main/vendor/bootstrap/css/bootstrap.min.css">
+
+    <!-- Theme CSS -->
+    <link href="static/main/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="static/main/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/main/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- skulpt min js -->
+    <script src="static/main/dist/skulpt.min.js" type="text/javascript"></script>
+    <script src="static/main/dist/skulpt-stdlib.js" type="text/javascript"></script>
+
+    <!-- editor styles -->
+    <style>
+      .editor-container{
+        height: 500px;
+        background: grey;
+        border-radius: 12px;
+      }
+      #editor {
+          margin: 0;
+          position: absolute;
+          height: 500px;
+          left: 0;
+          right: 0;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+      }
+      .run-code{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #mycanvas{
+        border: #333 solid 1px;
+        border-radius: 12px;
+        height: 400px;
+        width: 400px;
+      }
+      #output{
+        height: 40px;
+      }
+      @media (max-width: 700px) {
+        .editor-section, .editor-container, #editor, .run-code, #mycanvas, #output, .editor-heading{
+          display: none;
+        }
+      }
+      #error_1_id_content, #error_1_id_email{
+        display: block;
+        color:red;
+        font-weight: bolder;
+      }
+      
+      input[type="submit"]
+      {
+          margin: 20px 0;
+      }
+          </style>
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html#page-top">Ottawa U > Python Club</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="index.html">Home</a>
+                  </li>
+                    <li class="hidden">
+                        <a href="index.html#page-top"></a>
+                    </li>
+                    <li class="page-scrollss">
+                        <a href="events">Events</a>
+                    </li>
+                    <li>
+                        <a href="members">About</a>
+                    </li>
+                    <li>
+                        <a href="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
     
+
+
     
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-    <style type="text/css">
-  .loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url('http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif') 50% 50% no-repeat rgb(249,249,249);
-}
-</style>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="static/main/img/hybrid-logo.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Learn Python</span>
+                        <span class="skills">Enthusiastic Community - Beginner Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<hr>
 
-        <link rel="stylesheet" href="css/style.css">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script type="text/javascript">
-$(window).load(function() {
-  $(".loader").fadeOut("slow");
-})
-</script>
+
+
+
+
+
     
-    
-    
-  </head>
+<!-- Editor Section -->
+<section id="editor-section">
+    <div class="container">
+      <div class="row">
 
-  <body>
+        <h2 class="text-center editor-heading">Try Python Right Here</h2>
+        <hr class="solid-hr-black editor-heading">
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">UOPy Club</a>
-    </div>
+          <!-- Editor Markup -->
+          <div class="col-xs-12 col-md-6 col-md-offset-3 editor-container">
 
-    <div class="collapse navbar-collapse" id="navbar-collapse-main">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#members">About us</a></li>
-        <li><a href="#discography">Upcoming Events</a></li>
-        <li><a href="#gigs">News</a></li>
-        <li><a href="#about">join us</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<pre id="editor">import turtle
+import random
 
+# *** ***
+# Press the "run" button below and
+# see what Python can do!
+#
+# feel free to modify the code below
+# and start learning Python now!
+# *** ***
 
-<div id="home">
-  <div class="center-image">
-    <!--
-    <img src="https://dl.dropboxusercontent.com/u/50943129/codepen/Arctic-Monkeys-logo.png" height="150px"><br>
-    <a href="#members" class="btn btn-default btn-md">Continue</a>
-  -->
-  <h1 style='color:white;font-size:6rem;'><div class="element"></div></h1>
-        <img class="uottawa_logo animate fadeInLeft" src="img/uottawa_hor_white.png" width="40%" style="display:none; padding-top:30px;">
-  </div>
-</div>
+r = random
+t = turtle.Turtle()
 
-<div id="members" class="pad-md">
-  <div class="container">
-    <div class="row">
-      <h2>Representant</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <img class="uottawa_logo animate fadeInLeft featurette-image img-responsive center-block" src="img/logo2.jpg" width="60%" style="padding-top:30px;margin-bottom:8px;" data-holder-rendered="true" data-src="holder.js/500x500/auto">
-        <hr style="color:black;">
-      </div>
-      <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block featurette-image img-responsive center-block" src="img/gmg.jpeg" alt="Generic placeholder image" width="140" height="140" data-holder-rendered="true" data-src="holder.js/500x500/auto">
-        <h3>Guinsly Mondésir</h3>
-        <p>President of the Uopy Club. Master candidate in Information studies @ UO</p>
-        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
-      </div>
-      <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block featurette-image img-responsive center-block" src="img/nabin.jpg" alt="Generic placeholder image" width="140" height="140" data-holder-rendered="true" data-src="holder.js/500x500/auto">
-        <h3>Nabin Subedi</h3>
-        <p>V-P social of the UOPy club. Master candidate in Electronic Business @ UO_</p>
-        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
-      </div>
-      <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block featurette-image img-responsive center-block" src="img/tae.jpg" alt="Generic placeholder image" width="140" height="140" data-holder-rendered="true" data-src="holder.js/500x500/auto">
-        <h3>Taiwo Adeife</h3>
-        <p>V-P of the UOPy club. Master candidate in Electronic Business @ UO</p>
-        <!--<p><a class="btn btn-default" href="#" role="button">Read more »</a></p>-->
-      </div>
-      <!--
-      <div class="col-lg-3">
-        <img class="img-circle img-responsive center-block" src="https://dl.dropboxusercontent.com/u/50943129/codepen/nick-omalley.jpg" alt="Generic placeholder image" width="140" height="140">
-        <h3>Nick O'Malley</h3>
-        <p>Nicholas "Nick" O'Malley (born 5 July 1985) is the bass guitarist and backing vocalist of Sheffield-based band Arctic Monkeys.</p>
-        <p><a class="btn btn-default" href="#" role="button">Read more »</a></p>
-      </div>
-    -->
-    </div>
-  </div>
-</div>
+print "Hello World"
 
-<div id="discography" class="pad-md">
-  <div class="container">
-    <div class="row">
-      <h2>About us</h2>
-    </div>
-    <div class="row featurette">
-      <div class="col-md-9">
-        <h3 class="featurette-heading">Where the pythonist's at<span class="text-muted"> UOttawa</span></h3>
-        <p class="lead">We're a growing volunteer run community of Python users based @ the University of Ottawa! We bring together Pythonistas from academic, web, science, data, visual effects and other backgrounds under one roof to discuss all things related to Python.<span class="text-muted"> Our Goal</span> is to teach a basic level of python to any students @ Uottawa. Feel free to come and learn Python </p>
-        <!--
-        <br/>
-        <h4><a href="" target="_blank">Our Constitution (PDF)</a></h4>
-        -->
-      </div>
-      <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://www.unixstickers.com/image/cache/data/stickers/python/python_sh-600x600.png" data-holder-rendered="true">
-      </div>
-    </div>
-    <!--
-    <hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-9 col-md-push-3">
-        <h2 class="featurette-heading">Favourite Worst Nightmare <span class="text-muted">2007</span></h2>
-        <p class="lead">Favourite Worst Nightmare is the second studio album by the English indie rock band Arctic Monkeys that was first released in Japan on 18 April 2007 before being released around the world. Recorded in east London's Miloco Studios with producers James Ford and Mike Crossey, the album was preceded by the release of "Brianstorm" on 16 April 2007.</p>
-      </div>
-      <div class="col-md-3 col-md-pull-9">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/favorite-worst-nightmare.jpg" data-holder-rendered="true">
-      </div>
-    </div>
-  -->
-  </div>
-</div>
+for i in range(8):
+for j in ["green", "blue", "pink", "orange"]:
+t.pencolor(j)
+t.left(r.random() * 360)
+t.circle(r.random() * 100)
+</pre>
 
-<div id="discography-layover" class="pad-md">
-  <h1 style="color:white;font-size:6rem;" class="text-center">Workshops</h1>
-</div>
-
-<div id="discography-part2" class="pad-md">
-  <div class="container">
-
-    <div class="row featurette">
-      <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://rmotr.com/images/courses/python-programming.png" data-holder-rendered="true">
+          </div> <!-- Editor Markup ends -->
       </div>
-      <div class="col-md-9">
-        <h3 class="featurette-heading">Getting started with Python <span class="text-muted">April 26th 2016 - 45 min.</span></h3>
-        <p class="lead">This presentation will show you how to install python in your computer or laptop, what are the IDE that you can install in order to write python' script. We will run a simple Hello-world program. in other words this workshop will be a must for our two weeks session on Learning python programming (May 2016)</p>
-        <div class="bs-component" style="margin-bottom: 40px;">
-              <span class="label label-primary">beginner</span>
-              <span class="label label-success">workshop</span>
-              <span class="label label-danger">linux</span>
-              <span class="label label-info">Mac</span>
-              <span class="label label-warning">Windows</span>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+
+      <!-- Sculpt run button and output areas -->
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+          <button class="btn btn-primary center-block run-code" type="button" onclick="runit()">Run</button>
+          <pre id="output"></pre>
+          <div class="center-block" id="mycanvas"></div>
         </div>
       </div>
     </div>
-    <hr class="featurette-divider">
+</section>
 
-    <!--
-    <div class="row featurette">
-      <div class="col-md-9">
-        <h3 class="featurette-heading">Send "SMS" with Python <span class="text-muted">April 28th 2016</span></h3>
-        <p class="lead">This presentation will show you how to build an "SMS center" with Python , Kannel and a GSM modem. This is an advance topic but if you have a intermediate knowledge of programming you are welcome to assist. If you want to assist please send us an email.</p>
-        <div class="bs-component" style="margin-bottom: 40px;">
-              <span class="label label-primary">intermediate</span>
-              <span class="label label-success">django</span>
-              <span class="label label-warning">web development</span>
-              <span class="label label-danger">linux</span>
-              <span class="label label-info">Mac</span>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://raspberry.io/media/images/project_gallery_images/raspberrypoll18.jpg" data-holder-rendered="true">
-      </div>
-    </div>
-    -->
-
-        <div class="row featurette">
-      <div class="col-md-9">
-        <h3 class="featurette-heading">Bootcamp : Learn how to program with Python <span class="text-muted">May 4th - May 15th 2016 -- 1h15 </span></h3>
-        <p class="lead">We will meet 3 times during the first two weeks of May and you will learn how to program with Python. This will cover the basic of programming. If you want to have more information please send us an email </p>
-        <div class="bs-component" style="margin-bottom: 40px;">
-              <span class="label label-primary">beginner</span>
-              <span class="label label-success">Classes</span>
-              <span class="label label-warning">windows</span>
-              <span class="label label-danger">linux</span>
-              <span class="label label-info">Mac</span>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://appworksinc.com/wp-content/uploads/2014/07/Python.png" data-holder-rendered="true">
-      </div>
-    </div>
-    
-
-    <hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-9 col-md-push-3">
-        <h3 class="featurette-heading">Create a python package <span class="text-muted">May 15th 2016 - 60 min</span></h3>
-        <p class="lead">You will learn to create a Python module and deploy it to Pypi as a package.</p>
-          <div class="bs-component" style="margin-bottom: 40px;">
-              <span class="label label-primary">beginner</span>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-          </div>
-      </div>
-      <div class="col-md-3 col-md-pull-9">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="http://myzone.programiz.netdna-cdn.com/sites/tutorial2program/files/PackageModuleStructure.jpg" data-holder-rendered="true">
-      </div>
-    </div>
-    <!--
-    <hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-9">
-        <h2 class="featurette-heading">Workshop <span class="text-muted">2016</span></h2>
-        <p class="lead">AM is the fifth studio album by the English indie rock band Arctic Monkeys. It was produced by James Ford and co-produced by Ross Orton at Sage & Sound Recording in Los Angeles and Rancho De La Luna in Joshua Tree, California, and released in September 2013 through Domino. The album was promoted by the singles "R U Mine?", "Do I Wanna Know?", "Why'd You Only Call Me When You're High?", "One for the Road", "Arabella", and "Snap Out of It". It features guest appearances by Josh Homme, Bill Ryder-Jones, and Pete Thomas.</p>
-      </div>
-      <div class="col-md-3">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="https://dl.dropboxusercontent.com/u/50943129/codepen/am.jpg" data-holder-rendered="true">
-      </div>
-    </div>
-  -->
-  </div>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="index.html#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
 </div>
 
-
-<!-- fourth section - Information -->
-<div id="gigs" class="pad-md">
-  <div class="container">
-    <div class="row">
-      <h2>News</h2>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">No news</div>
-          <div class="panel-body">
-            For April
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Pas de récentes nouvelles</div>
-          <div class="panel-body">
-            pour le mois d'avril
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- /fourth section -->
-
-<!-- fifth section -->
-<div id="about">
-  <div class="container">
-    <div class="row">
-      <h1>About/ À Propos</h1>
-      <div class="col-sm-12 text-center">
-        <h3>Send us an email @ uottawapython at gmail dot com</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <div class="container">
-    <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>© 2016 University of Ottawa Python Club</p>
-  </div>
-</footer>
-
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-
-        <script src="js/index.js"></script>
-        <script>
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true });
-
-// Customizing a reveal set
-sr.reveal('.featurette-image', { duration: 2000 });
-        </script>
-
+<!-- Scripts for Ace -->
+<script src="static/main/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
 
-      $(".element").typed({
-        strings: ["^1500University of ^400 Ottawa ^500 Python ^300 Club!^700", "Where ^400 Python Enthusiasts ^300 meets!"],
-        //typeSpeed: 100,
-        backSpeed: 60,
-        cursorChar: "",
-        callback: function() {
-          $("img.uottawa_logo").delay(900).fadeIn();;
-        },
-      });
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/python");
 
 </script>
+
+<!-- Scripts for Sculpt -->
+<script type="text/javascript">
+
+function outf(text) {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+    return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+   var prog = editor.getValue();
+   var mypre = document.getElementById("output");
+   mypre.innerHTML = '';
+   Sk.pre = "output";
+   Sk.configure({output:outf, read:builtinRead});
+   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+   var myPromise = Sk.misceval.asyncToPromise(function() {
+       return Sk.importMainWithBody("<stdin>", false, prog, true);
+   });
+   myPromise.then(function(mod) {
+       console.log('success');
+   },
+       function(err) {
+       console.log(err.toString());
+   });
+}
+</script>
+
+
+
+
     
+    <!-- Events Section -->
+    <section class="success" id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Events</h2>
+                    <hr class="solid-hr">
+                </div>
+            </div>
+            <div class="row">
+
+              
+
+                  
+                  <h3><a class="collection-item" href="1/index.html">
+                    Getting Started with Python
+            </a></h3>
+                      <p>Nov. 2, 2016, 5:30 p.m.</p>
+                      <p>Location: GSD 307</p>
+                      <p>Duration: 120 min</p>
+                      <p>Cost: $0</p>
+                      <p>
+                        Get a comprehensive introduction to the core Python language. We meet each wednesday from October 26th to November 9th at the GSD building (Cafe Nostalgica) room 307 
+                        
+                      </p>
+                      <hr class="solid-hr">
+                  
+
+                   <h4>
+          <a href="contact">Contact us to register to this workshop</a>
+          </h4>
+
+              
+
+            </div>
+        </div>
+    </section>
+
+
     
-    
-  </body>
+    <!-- About.html to include -->
+<!-- Events.html to include -->
+
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4"></div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.facebook.com/UOPy-1645227019140231" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/uottawapython/" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/uopy_club" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Editor.html to include -->
+
+    <!-- jQuery -->
+    <script src="static/main/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/main/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+    <!-- Theme JavaScript-->
+    <script src="static/main/js/freelancer.min.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84802337-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
 </html>
